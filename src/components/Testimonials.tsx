@@ -1,17 +1,20 @@
 import { testimonials } from '../data/content'
+import { Reveal } from './Reveal'
+import { SectionBackdrop } from './SectionBackdrop'
 
 export function Testimonials() {
   return (
     <section className="section section--muted testimonials" id="testimonials">
+      <SectionBackdrop variant="muted" />
       <div className="container">
-        <div className="section__header">
+        <Reveal variant="up" className="section__header">
           <p className="eyebrow">Testimonials</p>
           <h2 className="section__title">Trusted by leaders across sectors</h2>
-        </div>
+        </Reveal>
 
         <div className="testimonials__grid">
-          {testimonials.map((item) => (
-            <figure key={item.name} className="testimonial-card">
+          {testimonials.map((item, index) => (
+            <Reveal key={item.name} as="figure" variant="up" delay={index * 120} className="testimonial-card">
               <blockquote>
                 <p>&ldquo;{item.quote}&rdquo;</p>
               </blockquote>
@@ -19,7 +22,7 @@ export function Testimonials() {
                 <strong>{item.name}</strong>
                 <span>{item.role}</span>
               </figcaption>
-            </figure>
+            </Reveal>
           ))}
         </div>
       </div>

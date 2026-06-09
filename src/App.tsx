@@ -1,4 +1,5 @@
 import { Analytics } from '@vercel/analytics/react'
+import { useScrollEffects } from './hooks/useScrollEffects'
 import { About } from './components/About'
 import { Contact } from './components/Contact'
 import { Footer } from './components/Footer'
@@ -9,6 +10,8 @@ import { Testimonials } from './components/Testimonials'
 import { Work } from './components/Work'
 
 function App() {
+  useScrollEffects()
+
   return (
     <>
       <a href="#main" className="skip-link">

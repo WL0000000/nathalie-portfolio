@@ -1,5 +1,7 @@
 import type { ReactNode } from 'react'
 import { services } from '../data/content'
+import { Reveal } from './Reveal'
+import { SectionBackdrop } from './SectionBackdrop'
 
 const icons: Record<(typeof services)[number]['icon'], ReactNode> = {
   strategy: (
@@ -28,23 +30,24 @@ const icons: Record<(typeof services)[number]['icon'], ReactNode> = {
 export function Services() {
   return (
     <section className="section section--muted services" id="services">
+      <SectionBackdrop variant="muted" />
       <div className="container">
-        <div className="section__header">
+        <Reveal variant="up" className="section__header">
           <p className="eyebrow">Services</p>
           <h2 className="section__title">How I help organizations move forward</h2>
           <p className="section__lead section__lead--centered">
             Engagements are tailored to your stage, team, and goals — from
             focused diagnostics to long-term advisory partnerships.
           </p>
-        </div>
+        </Reveal>
 
         <div className="services__grid">
-          {services.map((service) => (
-            <article key={service.title} className="service-card">
+          {services.map((service, index) => (
+            <Reveal key={service.title} as="article" variant="up" delay={index * 90} className="service-card">
               <div className="service-card__icon">{icons[service.icon]}</div>
               <h3>{service.title}</h3>
               <p>{service.description}</p>
-            </article>
+            </Reveal>
           ))}
         </div>
       </div>

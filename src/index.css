@@ -660,13 +660,17 @@ textarea {
   object-position: center top;
 }
 
+.hero__card-top > div {
+  padding-top: 0.85rem;
+}
+
 .hero__card-name {
   font-family: var(--font-serif);
-  font-size: 1.65rem;
+  font-size: 1.9rem;
   font-weight: 700;
   line-height: 1.15;
   color: var(--color-ink);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.9rem;
 }
 
 .hero__card-role {

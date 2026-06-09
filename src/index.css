@@ -129,7 +129,6 @@ textarea {
 
 .section {
   position: relative;
-  overflow: hidden;
   padding: 6rem 0;
 }
 
@@ -342,59 +341,6 @@ textarea {
 
 /* Motion & backgrounds */
 
-@keyframes reveal-up {
-  from {
-    opacity: 0;
-    transform: translateY(56px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes reveal-left {
-  from {
-    opacity: 0;
-    transform: translateX(-48px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes reveal-right {
-  from {
-    opacity: 0;
-    transform: translateX(48px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes reveal-scale {
-  from {
-    opacity: 0;
-    transform: scale(0.92);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes reveal-fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 /* Hero / on-load reveals */
 .reveal--immediate {
   --reveal-duration: 2.4s;
@@ -439,89 +385,40 @@ textarea {
   opacity: 1;
 }
 
-/* Scroll-linked reveals — progress follows scroll position */
-@supports (animation-timeline: view()) {
-  .reveal--scroll {
-    transition: none;
-    animation-duration: 1ms;
-    animation-fill-mode: both;
-    animation-timing-function: linear;
-    animation-timeline: view();
-    animation-range: entry var(--reveal-start, -55%) cover var(--reveal-end, 60%);
-  }
-
-  .reveal--scroll.reveal--up {
-    animation-name: reveal-up;
-  }
-
-  .reveal--scroll.reveal--left {
-    animation-name: reveal-left;
-  }
-
-  .reveal--scroll.reveal--right {
-    animation-name: reveal-right;
-  }
-
-  .reveal--scroll.reveal--scale {
-    animation-name: reveal-scale;
-  }
-
-  .reveal--scroll.reveal--fade {
-    animation-name: reveal-fade;
-  }
+/* Scroll reveals — progress (0–1) is set from scroll position via JS */
+.reveal--scroll {
+  transition: none;
+  will-change: opacity, transform;
 }
 
-/* Fallback for browsers without scroll-driven animations */
-@supports not (animation-timeline: view()) {
-  .reveal--scroll {
-    --reveal-duration: 4s;
-    transition:
-      opacity var(--reveal-duration) cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay),
-      transform var(--reveal-duration) cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay);
-  }
+.reveal--scroll.reveal--up {
+  opacity: var(--reveal-progress, 0);
+  transform: translateY(calc((1 - var(--reveal-progress, 0)) * 56px));
+}
 
-  .reveal--scroll.reveal--up {
-    opacity: 0;
-    transform: translateY(56px);
-  }
+.reveal--scroll.reveal--left {
+  opacity: var(--reveal-progress, 0);
+  transform: translateX(calc((1 - var(--reveal-progress, 0)) * -48px));
+}
 
-  .reveal--scroll.reveal--left {
-    opacity: 0;
-    transform: translateX(-48px);
-  }
+.reveal--scroll.reveal--right {
+  opacity: var(--reveal-progress, 0);
+  transform: translateX(calc((1 - var(--reveal-progress, 0)) * 48px));
+}
 
-  .reveal--scroll.reveal--right {
-    opacity: 0;
-    transform: translateX(48px);
-  }
+.reveal--scroll.reveal--scale {
+  opacity: var(--reveal-progress, 0);
+  transform: scale(calc(0.92 + var(--reveal-progress, 0) * 0.08));
+}
 
-  .reveal--scroll.reveal--scale {
-    opacity: 0;
-    transform: scale(0.92);
-  }
-
-  .reveal--scroll.reveal--fade {
-    opacity: 0;
-  }
-
-  .reveal--scroll.reveal--visible.reveal--up,
-  .reveal--scroll.reveal--visible.reveal--left,
-  .reveal--scroll.reveal--visible.reveal--right,
-  .reveal--scroll.reveal--visible.reveal--scale {
-    opacity: 1;
-    transform: none;
-  }
-
-  .reveal--scroll.reveal--visible.reveal--fade {
-    opacity: 1;
-  }
+.reveal--scroll.reveal--fade {
+  opacity: var(--reveal-progress, 0);
 }
 
 .section-backdrop {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  overflow: hidden;
   z-index: 0;
 }
 
@@ -665,7 +562,6 @@ textarea {
 
 .hero {
   position: relative;
-  overflow: hidden;
   padding: 4.5rem 0 6rem;
 }
 
@@ -1221,7 +1117,7 @@ textarea {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
-    animation: none !important;
+    --reveal-progress: 1 !important;
   }
 
   .hero__card,

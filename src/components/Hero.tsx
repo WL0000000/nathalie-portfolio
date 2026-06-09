@@ -64,8 +64,8 @@ export function Hero() {
                 <img
                   src={site.profilePhoto}
                   alt={`Portrait of ${site.name}`}
-                  width={56}
-                  height={56}
+                  width={92}
+                  height={115}
                   loading="eager"
                   decoding="async"
                 />

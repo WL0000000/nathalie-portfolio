@@ -10,7 +10,7 @@ export function useInView<T extends HTMLElement>(
   ref: RefObject<T | null>,
   options: UseInViewOptions = {},
 ) {
-  const { threshold = 0.15, rootMargin = '0px 0px -8% 0px', immediate = false } =
+  const { threshold = 0.12, rootMargin = '0px 0px 8% 0px', immediate = false } =
     options
   const [inView, setInView] = useState(immediate)
 

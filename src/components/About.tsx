@@ -24,12 +24,12 @@ export function About() {
           <Reveal variant="up">
             <p className="eyebrow">About</p>
           </Reveal>
-          <Reveal variant="up" delay={80}>
+          <Reveal variant="up" delay={120}>
             <h2 className="section__title">
               Partnering with leaders who want sustainable growth
             </h2>
           </Reveal>
-          <Reveal variant="up" delay={160}>
+          <Reveal variant="up" delay={240}>
             <p className="section__lead">
               I am {site.name}, a business strategist focused on helping companies
               translate vision into execution. My work sits at the intersection of
@@ -37,7 +37,7 @@ export function About() {
               stall.
             </p>
           </Reveal>
-          <Reveal variant="up" delay={240}>
+          <Reveal variant="up" delay={360}>
             <p className="section__text">
               Whether you are scaling into new markets, restructuring internal
               teams, or preparing for a pivotal growth phase, I bring structured
@@ -46,7 +46,7 @@ export function About() {
           </Reveal>
           <ul className="about__highlights">
             {highlights.map((item, index) => (
-              <Reveal key={item} as="li" variant="left" delay={index * 80}>
+              <Reveal key={item} as="li" variant="left" delay={index * 140}>
                 {item}
               </Reveal>
             ))}

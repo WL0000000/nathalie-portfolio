@@ -23,10 +23,10 @@ export function Contact() {
           <Reveal variant="left">
             <p className="eyebrow">Contact</p>
           </Reveal>
-          <Reveal variant="left" delay={80}>
+          <Reveal variant="left" delay={120}>
             <h2 className="section__title">Let&apos;s discuss your next initiative</h2>
           </Reveal>
-          <Reveal variant="left" delay={160}>
+          <Reveal variant="left" delay={240}>
             <p className="section__lead">
               Share a brief overview of your goals and timeline. I typically
               respond within two business days.
@@ -34,21 +34,21 @@ export function Contact() {
           </Reveal>
 
           <ul className="contact__details">
-            <Reveal as="li" variant="left" delay={240}>
+            <Reveal as="li" variant="left" delay={360}>
               <span>Email</span>
               <a href={`mailto:${site.email}`}>{site.email}</a>
             </Reveal>
-            <Reveal as="li" variant="left" delay={300}>
+            <Reveal as="li" variant="left" delay={450}>
               <span>Phone</span>
               <a href={`tel:${site.phone.replace(/\s/g, '')}`}>{site.phone}</a>
             </Reveal>
-            <Reveal as="li" variant="left" delay={360}>
+            <Reveal as="li" variant="left" delay={540}>
               <span>Location</span>
               <p>{site.location}</p>
             </Reveal>
           </ul>
 
-          <Reveal variant="left" delay={420}>
+          <Reveal variant="left" delay={630}>
             <a
               href={site.linkedin}
               className="contact__linkedin"
@@ -60,7 +60,7 @@ export function Contact() {
           </Reveal>
         </div>
 
-        <Reveal variant="right" delay={120}>
+        <Reveal variant="right" delay={180}>
           <form className="contact__form" onSubmit={handleSubmit} noValidate>
             <div className="form-field">
               <label htmlFor="name">Full name</label>

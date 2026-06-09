@@ -21,7 +21,20 @@ export function Header() {
   const closeMenu = () => setMenuOpen(false)
 
   return (
-    <header className={`header${scrolled ? ' header--scrolled' : ''}`}>
+    <header
+      className={`header${scrolled ? ' header--scrolled' : ''}${
+        menuOpen ? ' header--menu-open' : ''
+      }`}
+    >
+      <button
+        type="button"
+        className={`header__backdrop${menuOpen ? ' header__backdrop--visible' : ''}`}
+        aria-hidden={!menuOpen}
+        tabIndex={menuOpen ? 0 : -1}
+        aria-label="Close menu"
+        onClick={closeMenu}
+      />
+
       <div className="container header__inner">
         <a href="#" className="header__brand" onClick={closeMenu}>
           <span className="header__brand-mark">NW</span>

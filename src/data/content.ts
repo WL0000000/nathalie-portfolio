@@ -1,5 +1,5 @@
 export const site = {
-  name: 'Natalie Yan Wang',
+  name: 'Natalie Wang',
   title: 'Career Strategist & Real Estate Advisor',
   tagline:
     'Over eight years helping individuals navigate career transitions, cultural integration, and meaningful next steps.',
@@ -7,6 +7,7 @@ export const site = {
   phone: '604-518-7833',
   location: 'Coquitlam, BC',
   resumeUrl: '/natalie-wang-resume.pdf',
+  profilePhoto: '/natalie-profile.jpg',
 } as const
 
 export const navLinks = [

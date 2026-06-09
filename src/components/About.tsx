@@ -14,7 +14,7 @@ export function About() {
         <Reveal variant="right" className="about__visual">
           <div className="about__frame">
             <div className="about__portrait">
-              <span>NL</span>
+              <span>NW</span>
             </div>
             <div className="about__frame-accent" />
           </div>

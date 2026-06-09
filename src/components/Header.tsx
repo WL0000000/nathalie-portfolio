@@ -24,7 +24,7 @@ export function Header() {
     <header className={`header${scrolled ? ' header--scrolled' : ''}`}>
       <div className="container header__inner">
         <a href="#" className="header__brand" onClick={closeMenu}>
-          <span className="header__brand-mark">NL</span>
+          <span className="header__brand-mark">NW</span>
           <span className="header__brand-text">{site.name}</span>
         </a>
 

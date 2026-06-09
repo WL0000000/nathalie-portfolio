@@ -55,7 +55,7 @@ export function Hero() {
         <Reveal immediate variant="scale" delay={360} className="hero__visual">
           <div className="hero__card">
             <div className="hero__card-top">
-              <span className="hero__avatar">NL</span>
+              <span className="hero__avatar">NW</span>
               <div>
                 <p className="hero__card-name">{site.name}</p>
                 <p className="hero__card-role">{site.title}</p>

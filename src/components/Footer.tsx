@@ -7,7 +7,7 @@ export function Footer() {
     <footer className="footer">
       <div className="container footer__inner">
         <div className="footer__brand">
-          <span className="header__brand-mark">NL</span>
+          <span className="header__brand-mark">NW</span>
           <div>
             <p className="footer__name">{site.name}</p>
             <p className="footer__role">{site.title}</p>

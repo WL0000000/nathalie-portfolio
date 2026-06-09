@@ -1,9 +1,9 @@
 export const site = {
-  name: 'Nathalie Laurent',
+  name: 'Nathalie Wang',
   title: 'Business Strategist & Consultant',
   tagline:
     'Helping organizations grow with clarity, structure, and measurable results.',
-  email: 'hello@nathalielaurent.com',
+  email: 'hello@nathaliewang.com',
   phone: '+1 (555) 234-8901',
   location: 'Montreal, Canada',
   linkedin: 'https://linkedin.com',

@@ -1,12 +1,12 @@
 export const site = {
-  name: 'Nathalie Wang',
-  title: 'Business Strategist & Consultant',
+  name: 'Natalie Yan Wang',
+  title: 'Career Strategist & Real Estate Advisor',
   tagline:
-    'Helping organizations grow with clarity, structure, and measurable results.',
-  email: 'hello@nathaliewang.com',
-  phone: '+1 (555) 234-8901',
-  location: 'Montreal, Canada',
-  linkedin: 'https://linkedin.com',
+    'Over eight years helping individuals navigate career transitions, cultural integration, and meaningful next steps.',
+  email: 'nathaliewang_bc@hotmail.com',
+  phone: '604-518-7833',
+  location: 'Coquitlam, BC',
+  resumeUrl: '/natalie-wang-resume.pdf',
 } as const
 
 export const navLinks = [
@@ -14,90 +14,98 @@ export const navLinks = [
   { label: 'Services', href: '#services' },
   { label: 'Work', href: '#work' },
   { label: 'Testimonials', href: '#testimonials' },
+  { label: 'Resume', href: '/natalie-wang-resume.pdf', external: true },
   { label: 'Contact', href: '#contact' },
 ] as const
 
 export const stats = [
-  { value: '12+', label: 'Years experience' },
-  { value: '80+', label: 'Clients served' },
-  { value: '95%', label: 'Client retention' },
+  { value: '8+', label: 'Years in career counselling' },
+  { value: '80%+', label: 'Client employment rate' },
+  { value: '3x', label: 'Platinum Sales Award' },
+] as const
+
+export const aboutHighlights = [
+  'M.Ed. in Adult Learning & Global Change — University of British Columbia',
+  '8+ years in career counselling and government-funded immigrant services',
+  'Certified in Personality Dimensions, Crisis Intervention, and Community Counselling',
+  'Fluent in English and Mandarin; active community volunteer in the Tri-Cities',
 ] as const
 
 export const services = [
   {
-    title: 'Business Strategy',
+    title: 'Career Counselling',
     description:
-      'Define clear direction, prioritize initiatives, and align teams around outcomes that matter.',
+      'Individual and group guidance on career, personal, and academic concerns — from job search strategy to long-term planning.',
     icon: 'strategy',
   },
   {
-    title: 'Operations & Process',
+    title: 'Cross-Cultural Advising',
     description:
-      'Streamline workflows, reduce friction, and build systems that scale without sacrificing quality.',
+      'Support for foreign credentials, cultural adjustment, and transition issues through culturally responsive counselling.',
     icon: 'operations',
   },
   {
-    title: 'Leadership Advisory',
+    title: 'Workshops & Events',
     description:
-      'Support executives and managers with coaching, decision frameworks, and stakeholder alignment.',
+      'Design and delivery of seminars, workshops, and community events — including job fairs and mentorship programs.',
     icon: 'leadership',
   },
   {
-    title: 'Growth Planning',
+    title: 'Real Estate Advisory',
     description:
-      'Identify market opportunities, refine positioning, and create actionable roadmaps for expansion.',
+      'Trusted real estate guidance for clients in the Lower Mainland, backed by three consecutive Platinum Sales Awards.',
     icon: 'growth',
   },
 ] as const
 
 export const projects = [
   {
-    category: 'Retail',
-    title: 'National expansion roadmap',
+    category: 'Community',
+    title: 'Career Connection Job Fair',
     description:
-      'Led a 6-month strategic review that unlocked 18% revenue growth across three new regions.',
-    year: '2025',
+      'Coordinated and promoted a regional job fair with SUCCESS, ISS, and MOSAIC — over 4,000 job seekers attended.',
+    year: '2009',
   },
   {
-    category: 'Healthcare',
-    title: 'Operational turnaround',
+    category: 'Immigrant Services',
+    title: 'Skills Connect for Immigrants',
     description:
-      'Redesigned patient intake and scheduling, cutting wait times by 32% within one quarter.',
-    year: '2024',
+      'Case-managed internationally trained professionals, exceeding client serving targets by 200% with employment rates over 80%.',
+    year: '2009–2016',
   },
   {
-    category: 'Technology',
-    title: 'Go-to-market repositioning',
+    category: 'Community',
+    title: 'Chinese New Year Celebration',
     description:
-      'Refined messaging and sales enablement for a B2B SaaS firm entering enterprise markets.',
-    year: '2024',
+      'Organized and hosted a community celebration event with over 500 participants.',
+    year: '—',
   },
   {
-    category: 'Finance',
-    title: 'Leadership development program',
+    category: 'Real Estate',
+    title: 'Platinum Sales Award',
     description:
-      'Built a manager training framework adopted by 40+ leaders across regional offices.',
-    year: '2023',
+      'Earned Sutton Group Platinum Sales Award three consecutive years — 2017, 2018, and 2019.',
+    year: '2017–2019',
   },
 ] as const
 
 export const testimonials = [
   {
     quote:
-      'Nathalie brought structure to a complex initiative when we needed it most. Her recommendations were practical, data-informed, and immediately actionable.',
-    name: 'Marcus Chen',
-    role: 'COO, Northline Group',
+      'Exceeded client serving target at 200% while generating employment rates over 80% for job seeker clients in the Skills Connect for Immigrants Program.',
+    name: 'Training Innovations',
+    role: 'Skills Connect for Immigrants Program',
   },
   {
     quote:
-      'She listens carefully, challenges assumptions respectfully, and delivers work that leadership teams can actually implement.',
-    name: 'Sophie Tremblay',
-    role: 'Director of Operations, Helix Health',
+      'Platinum Sales Award recipient three consecutive years — recognized for outstanding performance and client service.',
+    name: 'Sutton Group 1st West Realty',
+    role: '2017, 2018 & 2019',
   },
   {
     quote:
-      'Our executive team left every session with clearer priorities and stronger alignment. A rare combination of strategic depth and operational rigor.',
-    name: 'David Okonkwo',
-    role: 'CEO, Meridian Labs',
+      'Designed and implemented job search workshops, oriented mentors, and coordinated a Mentor Appreciation event with 200 mentors, mentees, and staff.',
+    name: 'S.U.C.C.E.S.S. Employment Services',
+    role: 'Burnaby, BC',
   },
 ] as const

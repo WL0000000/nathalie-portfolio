@@ -9,10 +9,10 @@ export function Work() {
       <div className="container">
         <Reveal variant="up" className="section__header">
           <p className="eyebrow">Selected Work</p>
-          <h2 className="section__title">Recent engagements &amp; outcomes</h2>
+          <h2 className="section__title">Major achievements &amp; outcomes</h2>
           <p className="section__lead section__lead--centered">
-            A sample of projects across industries. Client names are anonymized
-            where required by confidentiality agreements.
+            Highlights from career counselling, community programs, and real estate
+            work across the Greater Vancouver area.
           </p>
         </Reveal>
 

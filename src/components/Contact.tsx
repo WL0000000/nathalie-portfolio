@@ -24,12 +24,12 @@ export function Contact() {
             <p className="eyebrow">Contact</p>
           </Reveal>
           <Reveal variant="left" delay={80}>
-            <h2 className="section__title">Let&apos;s discuss your next initiative</h2>
+            <h2 className="section__title">Get in touch</h2>
           </Reveal>
           <Reveal variant="left" delay={160}>
             <p className="section__lead">
-              Share a brief overview of your goals and timeline. I typically
-              respond within two business days.
+              Reach out by email or phone to discuss career counselling, real estate,
+              or community collaboration opportunities.
             </p>
           </Reveal>
 
@@ -50,12 +50,12 @@ export function Contact() {
 
           <Reveal variant="left" delay={420}>
             <a
-              href={site.linkedin}
+              href={site.resumeUrl}
               className="contact__linkedin"
               target="_blank"
               rel="noreferrer"
             >
-              Connect on LinkedIn
+              View full resume (PDF)
             </a>
           </Reveal>
         </div>

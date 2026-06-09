@@ -19,12 +19,12 @@ export function Hero() {
       <div className="container hero__grid">
         <div className="hero__content">
           <Reveal immediate variant="fade" delay={0}>
-            <p className="eyebrow">Business Portfolio</p>
+            <p className="eyebrow">Professional Portfolio</p>
           </Reveal>
           <Reveal immediate variant="up" delay={120}>
             <h1 className="hero__title">
-              Strategic clarity for
-              <span className="hero__accent"> ambitious organizations</span>
+              Guidance and clarity for
+              <span className="hero__accent"> careers and community</span>
             </h1>
           </Reveal>
           <Reveal immediate variant="up" delay={280}>
@@ -35,8 +35,13 @@ export function Hero() {
               <a href="#contact" className="btn btn--primary">
                 Start a conversation
               </a>
-              <a href="#work" className="btn btn--ghost">
-                View selected work
+              <a
+                href={site.resumeUrl}
+                className="btn btn--ghost"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View resume
               </a>
             </div>
           </Reveal>
@@ -62,11 +67,11 @@ export function Hero() {
               </div>
             </div>
             <ul className="hero__card-list">
-              <li>Strategy &amp; growth planning</li>
-              <li>Operations optimization</li>
-              <li>Executive advisory</li>
+              <li>Career counselling &amp; job search</li>
+              <li>Cross-cultural integration</li>
+              <li>Real estate advisory</li>
             </ul>
-            <div className="hero__card-badge">Available for Q3 engagements</div>
+            <div className="hero__card-badge">Serving Coquitlam &amp; the Lower Mainland</div>
           </div>
           <div className="hero__glow" />
         </Reveal>

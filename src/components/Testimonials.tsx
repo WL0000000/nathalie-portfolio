@@ -9,7 +9,7 @@ export function Testimonials() {
       <div className="container">
         <Reveal variant="up" className="section__header">
           <p className="eyebrow">Testimonials</p>
-          <h2 className="section__title">Trusted by leaders across sectors</h2>
+          <h2 className="section__title">Recognized impact across programs</h2>
         </Reveal>
 
         <div className="testimonials__grid">

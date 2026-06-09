@@ -1,11 +1,5 @@
-import { site } from '../data/content'
+import { aboutHighlights, site } from '../data/content'
 import { Reveal } from './Reveal'
-
-const highlights = [
-  'Former management consultant with Fortune 500 and mid-market clients',
-  'MBA, Strategy & Organizational Leadership',
-  'Fluent in English and French; based in Montreal with global project experience',
-]
 
 export function About() {
   return (
@@ -26,26 +20,27 @@ export function About() {
           </Reveal>
           <Reveal variant="up" delay={80}>
             <h2 className="section__title">
-              Partnering with leaders who want sustainable growth
+              Supporting people through career, cultural, and life transitions
             </h2>
           </Reveal>
           <Reveal variant="up" delay={160}>
             <p className="section__lead">
-              I am {site.name}, a business strategist focused on helping companies
-              translate vision into execution. My work sits at the intersection of
-              strategy, operations, and leadership — where plans either succeed or
-              stall.
+              I am {site.name}, a career strategist and real estate advisor based
+              in Coquitlam, BC. My work spans cross-cultural counselling, job search
+              coaching, and community program coordination — always with a sincere
+              commitment to the best interests of those I serve.
             </p>
           </Reveal>
           <Reveal variant="up" delay={240}>
             <p className="section__text">
-              Whether you are scaling into new markets, restructuring internal
-              teams, or preparing for a pivotal growth phase, I bring structured
-              thinking, stakeholder alignment, and hands-on follow-through.
+              From government-funded immigrant services and employment consulting to
+              real estate and freelance writing, I bring strong interpersonal skills,
+              public-speaking experience, and a proven ability to deliver results under
+              pressure.
             </p>
           </Reveal>
           <ul className="about__highlights">
-            {highlights.map((item, index) => (
+            {aboutHighlights.map((item, index) => (
               <Reveal key={item} as="li" variant="left" delay={index * 80}>
                 {item}
               </Reveal>

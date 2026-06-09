@@ -49,7 +49,13 @@ export function Header() {
           <ul className="header__links">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <a href={link.href} onClick={closeMenu}>
+                <a
+                  href={link.href}
+                  onClick={closeMenu}
+                  {...('external' in link && link.external
+                    ? { target: '_blank', rel: 'noreferrer' }
+                    : {})}
+                >
                   {link.label}
                 </a>
               </li>

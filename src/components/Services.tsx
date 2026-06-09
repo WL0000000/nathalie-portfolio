@@ -43,7 +43,7 @@ export function Services() {
 
         <div className="services__grid">
           {services.map((service, index) => (
-            <Reveal key={service.title} as="article" variant="up" delay={index * 150} className="service-card">
+            <Reveal key={service.title} as="article" variant="up" delay={index * 280} className="service-card">
               <div className="service-card__icon">{icons[service.icon]}</div>
               <h3>{service.title}</h3>
               <p>{service.description}</p>

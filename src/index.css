@@ -342,49 +342,179 @@ textarea {
 
 /* Motion & backgrounds */
 
-.reveal {
-  --reveal-delay: 0ms;
-  --reveal-duration: 1.35s;
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(56px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes reveal-left {
+  from {
+    opacity: 0;
+    transform: translateX(-48px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes reveal-right {
+  from {
+    opacity: 0;
+    transform: translateX(48px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes reveal-scale {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes reveal-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Hero / on-load reveals */
+.reveal--immediate {
+  --reveal-duration: 2.4s;
   transition:
-    opacity var(--reveal-duration) cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay),
-    transform var(--reveal-duration) cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay);
-  will-change: opacity, transform;
+    opacity var(--reveal-duration) cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay),
+    transform var(--reveal-duration) cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay);
 }
 
-.reveal--up {
+.reveal--immediate.reveal--up {
   opacity: 0;
-  transform: translateY(28px);
+  transform: translateY(40px);
 }
 
-.reveal--left {
+.reveal--immediate.reveal--left {
   opacity: 0;
-  transform: translateX(-28px);
+  transform: translateX(-36px);
 }
 
-.reveal--right {
+.reveal--immediate.reveal--right {
   opacity: 0;
-  transform: translateX(28px);
+  transform: translateX(36px);
 }
 
-.reveal--scale {
+.reveal--immediate.reveal--scale {
   opacity: 0;
-  transform: scale(0.96);
+  transform: scale(0.94);
 }
 
-.reveal--fade {
+.reveal--immediate.reveal--fade {
   opacity: 0;
 }
 
-.reveal--visible.reveal--up,
-.reveal--visible.reveal--left,
-.reveal--visible.reveal--right,
-.reveal--visible.reveal--scale {
+.reveal--immediate.reveal--visible.reveal--up,
+.reveal--immediate.reveal--visible.reveal--left,
+.reveal--immediate.reveal--visible.reveal--right,
+.reveal--immediate.reveal--visible.reveal--scale {
   opacity: 1;
   transform: none;
 }
 
-.reveal--visible.reveal--fade {
+.reveal--immediate.reveal--visible.reveal--fade {
   opacity: 1;
+}
+
+/* Scroll-linked reveals — progress follows scroll position */
+@supports (animation-timeline: view()) {
+  .reveal--scroll {
+    transition: none;
+    animation-duration: 1ms;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    animation-timeline: view();
+    animation-range: entry var(--reveal-start, -55%) cover var(--reveal-end, 60%);
+  }
+
+  .reveal--scroll.reveal--up {
+    animation-name: reveal-up;
+  }
+
+  .reveal--scroll.reveal--left {
+    animation-name: reveal-left;
+  }
+
+  .reveal--scroll.reveal--right {
+    animation-name: reveal-right;
+  }
+
+  .reveal--scroll.reveal--scale {
+    animation-name: reveal-scale;
+  }
+
+  .reveal--scroll.reveal--fade {
+    animation-name: reveal-fade;
+  }
+}
+
+/* Fallback for browsers without scroll-driven animations */
+@supports not (animation-timeline: view()) {
+  .reveal--scroll {
+    --reveal-duration: 4s;
+    transition:
+      opacity var(--reveal-duration) cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay),
+      transform var(--reveal-duration) cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay);
+  }
+
+  .reveal--scroll.reveal--up {
+    opacity: 0;
+    transform: translateY(56px);
+  }
+
+  .reveal--scroll.reveal--left {
+    opacity: 0;
+    transform: translateX(-48px);
+  }
+
+  .reveal--scroll.reveal--right {
+    opacity: 0;
+    transform: translateX(48px);
+  }
+
+  .reveal--scroll.reveal--scale {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+
+  .reveal--scroll.reveal--fade {
+    opacity: 0;
+  }
+
+  .reveal--scroll.reveal--visible.reveal--up,
+  .reveal--scroll.reveal--visible.reveal--left,
+  .reveal--scroll.reveal--visible.reveal--right,
+  .reveal--scroll.reveal--visible.reveal--scale {
+    opacity: 1;
+    transform: none;
+  }
+
+  .reveal--scroll.reveal--visible.reveal--fade {
+    opacity: 1;
+  }
 }
 
 .section-backdrop {
@@ -1091,6 +1221,7 @@ textarea {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
+    animation: none !important;
   }
 
   .hero__card,

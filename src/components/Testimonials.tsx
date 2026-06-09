@@ -14,7 +14,7 @@ export function Testimonials() {
 
         <div className="testimonials__grid">
           {testimonials.map((item, index) => (
-            <Reveal key={item.name} as="figure" variant="up" delay={index * 200} className="testimonial-card">
+            <Reveal key={item.name} as="figure" variant="up" delay={index * 360} className="testimonial-card">
               <blockquote>
                 <p>&ldquo;{item.quote}&rdquo;</p>
               </blockquote>

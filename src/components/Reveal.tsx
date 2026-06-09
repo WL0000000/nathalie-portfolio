@@ -1,4 +1,4 @@
-import { useRef, type CSSProperties, type ElementType, type ReactNode } from 'react'
+import { useEffect, useRef, useState, type CSSProperties, type ElementType, type ReactNode } from 'react'
 import { useInView } from '../hooks/useInView'
 
 type RevealVariant = 'up' | 'left' | 'right' | 'scale' | 'fade'
@@ -21,13 +21,30 @@ export function Reveal({
   immediate = false,
 }: RevealProps) {
   const ref = useRef<HTMLElement>(null)
-  const inView = useInView(ref, { immediate })
+  const [scrollLinked, setScrollLinked] = useState(false)
+  const inView = useInView(ref, {
+    immediate,
+    rootMargin: '0px 0px 50% 0px',
+    threshold: 0,
+  })
 
-  const style = { '--reveal-delay': `${delay}ms` } as CSSProperties
+  useEffect(() => {
+    setScrollLinked(CSS.supports('animation-timeline: view()'))
+  }, [])
+
+  const rangeShift = delay * 0.07
+  const style = {
+    '--reveal-delay': `${delay}ms`,
+    '--reveal-start': `${-55 + rangeShift}%`,
+    '--reveal-end': `${60 + rangeShift}%`,
+  } as CSSProperties
+
+  const useObserver = immediate || !scrollLinked
   const classes = [
     'reveal',
     `reveal--${variant}`,
-    inView ? 'reveal--visible' : '',
+    immediate ? 'reveal--immediate' : 'reveal--scroll',
+    useObserver && inView ? 'reveal--visible' : '',
     className,
   ]
     .filter(Boolean)

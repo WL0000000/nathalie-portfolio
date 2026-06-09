@@ -11,16 +11,16 @@ export function Hero() {
           <Reveal immediate variant="fade" delay={0}>
             <p className="eyebrow">Business Portfolio</p>
           </Reveal>
-          <Reveal immediate variant="up" delay={80}>
+          <Reveal immediate variant="up" delay={200}>
             <h1 className="hero__title">
               Strategic clarity for
               <span className="hero__accent"> ambitious organizations</span>
             </h1>
           </Reveal>
-          <Reveal immediate variant="up" delay={160}>
+          <Reveal immediate variant="up" delay={450}>
             <p className="hero__subtitle">{site.tagline}</p>
           </Reveal>
-          <Reveal immediate variant="up" delay={240}>
+          <Reveal immediate variant="up" delay={700}>
             <div className="hero__actions">
               <a href="#contact" className="btn btn--primary">
                 Start a conversation
@@ -30,7 +30,7 @@ export function Hero() {
               </a>
             </div>
           </Reveal>
-          <Reveal immediate variant="up" delay={320}>
+          <Reveal immediate variant="up" delay={950}>
             <dl className="hero__stats">
               {stats.map((stat) => (
                 <div key={stat.label} className="hero__stat">
@@ -42,7 +42,7 @@ export function Hero() {
           </Reveal>
         </div>
 
-        <Reveal immediate variant="scale" delay={200} className="hero__visual">
+        <Reveal immediate variant="scale" delay={500} className="hero__visual">
           <div className="hero__card">
             <div className="hero__card-top">
               <span className="hero__avatar">NL</span>

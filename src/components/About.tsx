@@ -46,7 +46,7 @@ export function About() {
           </Reveal>
           <ul className="about__highlights">
             {highlights.map((item, index) => (
-              <Reveal key={item} as="li" variant="left" delay={index * 140}>
+              <Reveal key={item} as="li" variant="left" delay={index * 260}>
                 {item}
               </Reveal>
             ))}

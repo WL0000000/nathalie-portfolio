@@ -1,26 +1,36 @@
+import { useEffect, useState } from 'react'
 import { site, stats } from '../data/content'
 import { Reveal } from './Reveal'
 import { SectionBackdrop } from './SectionBackdrop'
 
 export function Hero() {
+  const [loaded, setLoaded] = useState(false)
+
+  useEffect(() => {
+    const frame = requestAnimationFrame(() => {
+      requestAnimationFrame(() => setLoaded(true))
+    })
+    return () => cancelAnimationFrame(frame)
+  }, [])
+
   return (
-    <section className="hero" id="top">
+    <section className={`hero${loaded ? ' hero--loaded' : ''}`} id="top">
       <SectionBackdrop variant="hero" />
       <div className="container hero__grid">
         <div className="hero__content">
           <Reveal immediate variant="fade" delay={0}>
             <p className="eyebrow">Business Portfolio</p>
           </Reveal>
-          <Reveal immediate variant="up" delay={200}>
+          <Reveal immediate variant="up" delay={120}>
             <h1 className="hero__title">
               Strategic clarity for
               <span className="hero__accent"> ambitious organizations</span>
             </h1>
           </Reveal>
-          <Reveal immediate variant="up" delay={450}>
+          <Reveal immediate variant="up" delay={280}>
             <p className="hero__subtitle">{site.tagline}</p>
           </Reveal>
-          <Reveal immediate variant="up" delay={700}>
+          <Reveal immediate variant="up" delay={440}>
             <div className="hero__actions">
               <a href="#contact" className="btn btn--primary">
                 Start a conversation
@@ -30,7 +40,7 @@ export function Hero() {
               </a>
             </div>
           </Reveal>
-          <Reveal immediate variant="up" delay={950}>
+          <Reveal immediate variant="up" delay={600}>
             <dl className="hero__stats">
               {stats.map((stat) => (
                 <div key={stat.label} className="hero__stat">
@@ -42,7 +52,7 @@ export function Hero() {
           </Reveal>
         </div>
 
-        <Reveal immediate variant="scale" delay={500} className="hero__visual">
+        <Reveal immediate variant="scale" delay={360} className="hero__visual">
           <div className="hero__card">
             <div className="hero__card-top">
               <span className="hero__avatar">NL</span>

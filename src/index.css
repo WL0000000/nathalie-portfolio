@@ -129,6 +129,7 @@ textarea {
 
 .section {
   position: relative;
+  overflow: hidden;
   padding: 6rem 0;
 }
 
@@ -341,84 +342,60 @@ textarea {
 
 /* Motion & backgrounds */
 
-/* Hero / on-load reveals */
-.reveal--immediate {
-  --reveal-duration: 2.4s;
+.reveal {
+  --reveal-delay: 0ms;
+  --reveal-duration: 2s;
   transition:
     opacity var(--reveal-duration) cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay),
     transform var(--reveal-duration) cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay);
+  will-change: opacity, transform;
 }
 
-.reveal--immediate.reveal--up {
+.reveal--up {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(28px);
 }
 
-.reveal--immediate.reveal--left {
+.reveal--left {
   opacity: 0;
-  transform: translateX(-36px);
+  transform: translateX(-28px);
 }
 
-.reveal--immediate.reveal--right {
+.reveal--right {
   opacity: 0;
-  transform: translateX(36px);
+  transform: translateX(28px);
 }
 
-.reveal--immediate.reveal--scale {
+.reveal--scale {
   opacity: 0;
-  transform: scale(0.94);
+  transform: scale(0.96);
 }
 
-.reveal--immediate.reveal--fade {
+.reveal--fade {
   opacity: 0;
 }
 
-.reveal--immediate.reveal--visible.reveal--up,
-.reveal--immediate.reveal--visible.reveal--left,
-.reveal--immediate.reveal--visible.reveal--right,
-.reveal--immediate.reveal--visible.reveal--scale {
+.reveal--visible.reveal--up,
+.reveal--visible.reveal--left,
+.reveal--visible.reveal--right,
+.reveal--visible.reveal--scale {
   opacity: 1;
   transform: none;
 }
 
-.reveal--immediate.reveal--visible.reveal--fade {
+.reveal--visible.reveal--fade {
   opacity: 1;
 }
 
-/* Scroll reveals — progress (0–1) is set from scroll position via JS */
-.reveal--scroll {
-  transition: none;
-  will-change: opacity, transform;
-}
-
-.reveal--scroll.reveal--up {
-  opacity: var(--reveal-progress, 0);
-  transform: translateY(calc((1 - var(--reveal-progress, 0)) * 56px));
-}
-
-.reveal--scroll.reveal--left {
-  opacity: var(--reveal-progress, 0);
-  transform: translateX(calc((1 - var(--reveal-progress, 0)) * -48px));
-}
-
-.reveal--scroll.reveal--right {
-  opacity: var(--reveal-progress, 0);
-  transform: translateX(calc((1 - var(--reveal-progress, 0)) * 48px));
-}
-
-.reveal--scroll.reveal--scale {
-  opacity: var(--reveal-progress, 0);
-  transform: scale(calc(0.92 + var(--reveal-progress, 0) * 0.08));
-}
-
-.reveal--scroll.reveal--fade {
-  opacity: var(--reveal-progress, 0);
+.reveal--onload {
+  --reveal-duration: 1.15s;
 }
 
 .section-backdrop {
   position: absolute;
   inset: 0;
   pointer-events: none;
+  overflow: hidden;
   z-index: 0;
 }
 
@@ -562,7 +539,21 @@ textarea {
 
 .hero {
   position: relative;
+  overflow: hidden;
   padding: 4.5rem 0 6rem;
+}
+
+.hero .section-backdrop {
+  opacity: 0;
+  transform: scale(1.04);
+  transition:
+    opacity 1.4s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hero.hero--loaded .section-backdrop {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .hero__grid {
@@ -638,7 +629,10 @@ textarea {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
-  animation: float 7s ease-in-out infinite;
+}
+
+.hero.hero--loaded .hero__card {
+  animation: float 7s ease-in-out 1.2s infinite;
 }
 
 .hero__card-top {
@@ -1117,10 +1111,9 @@ textarea {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
-    --reveal-progress: 1 !important;
   }
 
-  .hero__card,
+  .hero.hero--loaded .hero__card,
   .hero__glow,
   .backdrop-orb,
   .section-backdrop--hero .backdrop-orb--1,

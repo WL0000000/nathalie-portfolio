@@ -18,7 +18,7 @@ export function Work() {
 
         <div className="work__grid">
           {projects.map((project, index) => (
-            <Reveal key={project.title} as="article" variant="up" delay={index * 320} className="work-card">
+            <Reveal key={project.title} as="article" variant="up" delay={index * 100} className="work-card">
               <div className="work-card__meta">
                 <span className="work-card__category">{project.category}</span>
                 <span className="work-card__year">{project.year}</span>

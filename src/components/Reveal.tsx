@@ -1,6 +1,5 @@
 import { useRef, type CSSProperties, type ElementType, type ReactNode } from 'react'
 import { useInView } from '../hooks/useInView'
-import { useScrollReveal } from '../hooks/useScrollReveal'
 
 type RevealVariant = 'up' | 'left' | 'right' | 'scale' | 'fade'
 
@@ -22,18 +21,18 @@ export function Reveal({
   immediate = false,
 }: RevealProps) {
   const ref = useRef<HTMLElement>(null)
-  const inView = useInView(ref, { immediate })
-  const progress = useScrollReveal(ref, { delay, disabled: immediate })
+  const inView = useInView(ref, {
+    immediate,
+    threshold: immediate ? 0 : 0.3,
+    rootMargin: immediate ? '0px' : '0px 0px -15% 0px',
+  })
 
-  const style: CSSProperties = immediate
-    ? { ['--reveal-delay' as string]: `${delay}ms` }
-    : { ['--reveal-progress' as string]: progress }
-
+  const style = { '--reveal-delay': `${delay}ms` } as CSSProperties
   const classes = [
     'reveal',
     `reveal--${variant}`,
-    immediate ? 'reveal--immediate' : 'reveal--scroll',
-    immediate && inView ? 'reveal--visible' : '',
+    immediate ? 'reveal--onload' : '',
+    inView ? 'reveal--visible' : '',
     className,
   ]
     .filter(Boolean)

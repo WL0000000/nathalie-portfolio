@@ -28,8 +28,8 @@ export function Contact() {
           </Reveal>
           <Reveal variant="left" delay={160}>
             <p className="section__lead">
-              Reach out by email or phone to discuss career counselling, real estate,
-              or community collaboration opportunities.
+              For career counselling, real estate, or speaking inquiries, please email
+              or call. I am based in Coquitlam and serve clients across the Lower Mainland.
             </p>
           </Reveal>
 
@@ -67,7 +67,7 @@ export function Contact() {
               <input id="name" name="name" type="text" required autoComplete="name" />
             </div>
             <div className="form-field">
-              <label htmlFor="email">Work email</label>
+              <label htmlFor="email">Email</label>
               <input
                 id="email"
                 name="email"
@@ -81,16 +81,16 @@ export function Contact() {
               <input id="company" name="company" type="text" autoComplete="organization" />
             </div>
             <div className="form-field">
-              <label htmlFor="message">How can I help?</label>
+              <label htmlFor="message">Message</label>
               <textarea id="message" name="message" rows={5} required />
             </div>
             <button type="submit" className="btn btn--primary btn--full">
-              Send inquiry
+              Send message
             </button>
             {status === 'success' && (
               <p className="form-success" role="status">
-                Thank you — your message has been recorded locally. Connect this
-                form to your email service when you are ready to go live.
+                Thank you. Your message has been saved locally. Connect this form to
+                an email service before going live.
               </p>
             )}
           </form>

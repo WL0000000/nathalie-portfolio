@@ -75,7 +75,7 @@ export function Header() {
             ))}
           </ul>
           <a href="#contact" className="btn btn--primary header__cta" onClick={closeMenu}>
-            Book a consultation
+            Contact
           </a>
         </nav>
       </div>

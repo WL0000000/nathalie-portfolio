@@ -1,6 +1,8 @@
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/react'
+import { useEffect } from 'react'
 import { useScrollEffects } from './hooks/useScrollEffects'
+import { site } from './data/content'
 import { About } from './components/About'
 import { Contact } from './components/Contact'
 import { Footer } from './components/Footer'
@@ -12,6 +14,10 @@ import { Work } from './components/Work'
 
 function App() {
   useScrollEffects()
+
+  useEffect(() => {
+    document.title = site.pageTitle
+  }, [])
 
   return (
     <>

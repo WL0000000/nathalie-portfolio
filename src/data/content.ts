@@ -1,8 +1,9 @@
 export const site = {
   name: 'Natalie Wang',
+  pageTitle: 'Natalie Wang | Portfolio',
   title: 'Career Strategist & Real Estate Advisor',
   tagline:
-    'Over eight years helping individuals navigate career transitions, cultural integration, and meaningful next steps.',
+    'Career counselling, immigrant employment services, and real estate advisory based in Coquitlam, BC.',
   email: 'nathaliewang_bc@hotmail.com',
   phone: '604-518-7833',
   location: 'Coquitlam, BC',
@@ -26,35 +27,35 @@ export const stats = [
 ] as const
 
 export const aboutHighlights = [
-  'M.Ed. in Adult Learning & Global Change — University of British Columbia',
+  'M.Ed., Adult Learning and Global Change, University of British Columbia',
   '8+ years in career counselling and government-funded immigrant services',
   'Certified in Personality Dimensions, Crisis Intervention, and Community Counselling',
-  'Fluent in English and Mandarin; active community volunteer in the Tri-Cities',
+  'Fluent in English and Mandarin; volunteer work in the Tri-Cities',
 ] as const
 
 export const services = [
   {
     title: 'Career Counselling',
     description:
-      'Individual and group guidance on career, personal, and academic concerns — from job search strategy to long-term planning.',
+      'One-on-one and group support for career, personal, and academic questions, including job search planning and skills upgrading.',
     icon: 'strategy',
   },
   {
     title: 'Cross-Cultural Advising',
     description:
-      'Support for foreign credentials, cultural adjustment, and transition issues through culturally responsive counselling.',
+      'Help with foreign credential recognition, cultural adjustment, and settlement issues for newcomers to Canada.',
     icon: 'operations',
   },
   {
     title: 'Workshops & Events',
     description:
-      'Design and delivery of seminars, workshops, and community events — including job fairs and mentorship programs.',
+      'Planning and delivery of job search workshops, seminars, job fairs, and community events.',
     icon: 'leadership',
   },
   {
     title: 'Real Estate Advisory',
     description:
-      'Trusted real estate guidance for clients in the Lower Mainland, backed by three consecutive Platinum Sales Awards.',
+      'Residential real estate services in the Lower Mainland. Three-time Sutton Group Platinum Sales Award recipient.',
     icon: 'growth',
   },
 ] as const
@@ -64,48 +65,48 @@ export const projects = [
     category: 'Community',
     title: 'Career Connection Job Fair',
     description:
-      'Coordinated and promoted a regional job fair with SUCCESS, ISS, and MOSAIC — over 4,000 job seekers attended.',
+      'Coordinated a regional job fair with SUCCESS, ISS, and MOSAIC. More than 4,000 job seekers attended.',
     year: '2009',
   },
   {
     category: 'Immigrant Services',
     title: 'Skills Connect for Immigrants',
     description:
-      'Case-managed internationally trained professionals, exceeding client serving targets by 200% with employment rates over 80%.',
-    year: '2009–2016',
+      'Case-managed internationally trained professionals and met client service targets at 200%, with employment rates above 80%.',
+    year: '2009-2016',
   },
   {
     category: 'Community',
     title: 'Chinese New Year Celebration',
     description:
-      'Organized and hosted a community celebration event with over 500 participants.',
-    year: '—',
+      'Organized and hosted a community event with more than 500 participants.',
+    year: 'n/a',
   },
   {
     category: 'Real Estate',
     title: 'Platinum Sales Award',
     description:
-      'Earned Sutton Group Platinum Sales Award three consecutive years — 2017, 2018, and 2019.',
-    year: '2017–2019',
+      'Received the Sutton Group Platinum Sales Award in 2017, 2018, and 2019.',
+    year: '2017-2019',
   },
 ] as const
 
 export const testimonials = [
   {
     quote:
-      'Exceeded client serving target at 200% while generating employment rates over 80% for job seeker clients in the Skills Connect for Immigrants Program.',
+      'Met client service targets at 200% and helped job seekers reach employment rates above 80% through the Skills Connect for Immigrants Program.',
     name: 'Training Innovations',
     role: 'Skills Connect for Immigrants Program',
   },
   {
     quote:
-      'Platinum Sales Award recipient three consecutive years — recognized for outstanding performance and client service.',
+      'Platinum Sales Award recipient in 2017, 2018, and 2019 for sales performance and client service.',
     name: 'Sutton Group 1st West Realty',
-    role: '2017, 2018 & 2019',
+    role: 'Real Estate',
   },
   {
     quote:
-      'Designed and implemented job search workshops, oriented mentors, and coordinated a Mentor Appreciation event with 200 mentors, mentees, and staff.',
+      'Developed job search workshops, trained mentors, and organized a Mentor Appreciation event for 200 mentors, mentees, and staff.',
     name: 'S.U.C.C.E.S.S. Employment Services',
     role: 'Burnaby, BC',
   },

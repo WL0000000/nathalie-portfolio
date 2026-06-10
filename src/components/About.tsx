@@ -20,23 +20,21 @@ export function About() {
           </Reveal>
           <Reveal variant="up" delay={80}>
             <h2 className="section__title">
-              Supporting people through career, cultural, and life transitions
+              Career counselling, employment services, and real estate
             </h2>
           </Reveal>
           <Reveal variant="up" delay={160}>
             <p className="section__lead">
-              I am {site.name}, a career strategist and real estate advisor based
-              in Coquitlam, BC. My work spans cross-cultural counselling, job search
-              coaching, and community program coordination — always with a sincere
-              commitment to the best interests of those I serve.
+              I am {site.name}, based in Coquitlam. I have worked in career counselling,
+              government-funded immigrant programs, and real estate for more than eight years.
             </p>
           </Reveal>
           <Reveal variant="up" delay={240}>
             <p className="section__text">
-              From government-funded immigrant services and employment consulting to
-              real estate and freelance writing, I bring strong interpersonal skills,
-              public-speaking experience, and a proven ability to deliver results under
-              pressure.
+              My background includes employment consulting with S.U.C.C.E.S.S. and Training
+              Innovations, ESL instruction, and community event coordination. I am comfortable
+              working with diverse clients, leading workshops, and managing programs under
+              tight deadlines.
             </p>
           </Reveal>
           <ul className="about__highlights">

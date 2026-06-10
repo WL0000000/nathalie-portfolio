@@ -1,7 +1,12 @@
 {
-  "name": "Natalie Wang | Professional Portfolio",
+  "name": "Natalie Wang | Portfolio",
   "short_name": "Natalie Wang",
   "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
     {
       "src": "/android-chrome-192x192.png",
       "sizes": "192x192",

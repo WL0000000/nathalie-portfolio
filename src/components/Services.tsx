@@ -34,10 +34,10 @@ export function Services() {
       <div className="container">
         <Reveal variant="up" className="section__header">
           <p className="eyebrow">Services</p>
-          <h2 className="section__title">How I support clients and communities</h2>
+          <h2 className="section__title">Areas of practice</h2>
           <p className="section__lead section__lead--centered">
-            Drawing on over eight years of counselling, employment consulting, and
-            community work across the Lower Mainland.
+            Services based on eight years of work in counselling, employment programs,
+            and real estate across the Lower Mainland.
           </p>
         </Reveal>
 

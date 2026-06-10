@@ -19,12 +19,12 @@ export function Hero() {
       <div className="container hero__grid">
         <div className="hero__content">
           <Reveal immediate variant="fade" delay={0}>
-            <p className="eyebrow">Professional Portfolio</p>
+            <p className="eyebrow">Portfolio</p>
           </Reveal>
           <Reveal immediate variant="up" delay={120}>
             <h1 className="hero__title">
-              Guidance and clarity for
-              <span className="hero__accent"> careers and community</span>
+              Career counselling and
+              <span className="hero__accent"> community work</span>
             </h1>
           </Reveal>
           <Reveal immediate variant="up" delay={280}>
@@ -33,7 +33,7 @@ export function Hero() {
           <Reveal immediate variant="up" delay={440}>
             <div className="hero__actions">
               <a href="#contact" className="btn btn--primary">
-                Start a conversation
+                Get in touch
               </a>
               <a
                 href={site.resumeUrl}
@@ -80,7 +80,7 @@ export function Hero() {
               <li>Cross-cultural integration</li>
               <li>Real estate advisory</li>
             </ul>
-            <div className="hero__card-badge">Serving Coquitlam &amp; the Lower Mainland</div>
+            <div className="hero__card-badge">Coquitlam and the Lower Mainland</div>
           </div>
           <div className="hero__glow" />
         </Reveal>

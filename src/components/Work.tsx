@@ -8,10 +8,11 @@ export function Work() {
       <SectionBackdrop variant="work" />
       <div className="container">
         <Reveal variant="up" className="section__header">
-          <p className="eyebrow">Selected Work</p>
-          <h2 className="section__title">Career highlights</h2>
+          <p className="eyebrow">Highlights</p>
+          <h2 className="section__title">Community and professional highlights</h2>
           <p className="section__lead section__lead--centered">
-            Selected results from employment programs, community work, and real estate.
+            School leadership, employment programs, and community initiatives across
+            Coquitlam and the Lower Mainland.
           </p>
         </Reveal>
 

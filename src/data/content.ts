@@ -1,11 +1,11 @@
-export const pageTitle = 'Natalie Wang | Portfolio' as const
+export const pageTitle = 'Natalie Wang | School Trustee Candidate – SD43 Coquitlam' as const
 
 export const site = {
   name: 'Natalie Wang',
   pageTitle,
-  title: 'Career Strategist & Real Estate Advisor',
+  title: 'School Trustee Candidate | SD43 Coquitlam',
   tagline:
-    'Career counselling, immigrant employment services, and real estate advisory based in Coquitlam, BC.',
+    'Parent leader, career counsellor, and community advocate running for School Trustee in School District 43 Coquitlam.',
   email: 'nathaliewang_bc@hotmail.com',
   phone: '604-518-7833',
   location: 'Coquitlam, BC',
@@ -15,8 +15,8 @@ export const site = {
 
 export const navLinks = [
   { label: 'About', href: '#about' },
-  { label: 'Services', href: '#services' },
-  { label: 'Work', href: '#work' },
+  { label: 'Experience', href: '#services' },
+  { label: 'Highlights', href: '#work' },
   { label: 'Testimonials', href: '#testimonials' },
   { label: 'Resume', href: '/natalie-wang-resume.pdf', external: true },
   { label: 'Contact', href: '#contact' },
@@ -24,45 +24,68 @@ export const navLinks = [
 
 export const stats = [
   { value: '8+', label: 'Years in career counselling' },
+  { value: '5+', label: 'Years serving school communities' },
   { value: '80%+', label: 'Client employment rate' },
-  { value: '3x', label: 'Platinum Sales Award' },
 ] as const
 
 export const aboutHighlights = [
   'M.Ed., Adult Learning and Global Change, University of British Columbia',
   '8+ years in career counselling and government-funded immigrant services',
+  'PAC Chair, Pinetree Secondary School (3 years, 2021–2024)',
+  'DPAC Representative, Panorama Heights Elementary (2019–2020) and Maple Creek Middle School (2020–2021)',
   'Certified in Personality Dimensions, Crisis Intervention, and Community Counselling',
-  'Fluent in English and Mandarin; volunteer work in the Tri-Cities',
+  'Fluent in English and Mandarin; deep roots in the Tri-Cities community',
 ] as const
 
 export const services = [
   {
     title: 'Career Counselling',
     description:
-      'One-on-one and group support for career, personal, and academic questions, including job search planning and skills upgrading.',
+      'One-on-one and group support for career, academic, and personal development — helping community members find meaningful employment and build lasting skills.',
     icon: 'strategy',
   },
   {
-    title: 'Cross-Cultural Advising',
+    title: 'Newcomer & Cross-Cultural Support',
     description:
-      'Help with foreign credential recognition, cultural adjustment, and settlement issues for newcomers to Canada.',
+      'Supporting immigrant families through credential recognition, cultural integration, and navigating school and community systems in Coquitlam.',
     icon: 'operations',
   },
   {
-    title: 'Workshops & Events',
+    title: 'Community & School Engagement',
     description:
-      'Planning and delivery of job search workshops, seminars, job fairs, and community events.',
+      'Leading PAC meetings, district advisory councils, job fairs, and community events that connect families with schools and local resources.',
     icon: 'leadership',
   },
   {
     title: 'Real Estate Advisory',
     description:
-      'Residential real estate services in the Lower Mainland. Three-time Sutton Group Platinum Sales Award recipient.',
+      'Residential real estate services across the Lower Mainland, helping families put down roots in the Coquitlam community. Three-time Sutton Group Platinum Sales Award recipient.',
     icon: 'growth',
   },
 ] as const
 
 export const projects = [
+  {
+    category: 'School Leadership',
+    title: 'PAC Chair, Pinetree Secondary School',
+    description:
+      'Served three consecutive years as PAC Chair, representing parent voices, coordinating school events, and partnering with school administration on student and family needs.',
+    year: '2021–2024',
+  },
+  {
+    category: 'District Parent Advisory',
+    title: 'DPAC Representative, Maple Creek Middle School',
+    description:
+      'Represented Maple Creek families at the District Parent Advisory Council, bringing parent perspectives into district-level education discussions for School District 43.',
+    year: '2020–2021',
+  },
+  {
+    category: 'District Parent Advisory',
+    title: 'DPAC Representative, Panorama Heights Elementary',
+    description:
+      'Represented Panorama Heights Elementary families at the District Parent Advisory Council, advocating for school community needs at the district level.',
+    year: '2019–2020',
+  },
   {
     category: 'Community',
     title: 'Career Connection Job Fair',
@@ -75,21 +98,21 @@ export const projects = [
     title: 'Skills Connect for Immigrants',
     description:
       'Case-managed internationally trained professionals and met client service targets at 200%, with employment rates above 80%.',
-    year: '2009-2016',
+    year: '2009–2016',
   },
   {
     category: 'Community',
     title: 'Chinese New Year Celebration',
     description:
-      'Organized and hosted a community event with more than 500 participants.',
+      'Organized and hosted a community celebration with more than 500 participants, bringing together families from across the Tri-Cities.',
     year: 'n/a',
   },
   {
     category: 'Real Estate',
     title: 'Platinum Sales Award',
     description:
-      'Received the Sutton Group Platinum Sales Award in 2017, 2018, and 2019.',
-    year: '2017-2019',
+      'Received the Sutton Group Platinum Sales Award in 2017, 2018, and 2019 for sales performance and client service.',
+    year: '2017–2019',
   },
 ] as const
 

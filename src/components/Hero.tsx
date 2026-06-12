@@ -18,16 +18,16 @@ export function Hero() {
       <SectionBackdrop variant="hero" />
       <div className="container hero__grid">
         <div className="hero__content">
-          <Reveal immediate variant="fade" delay={0}>
-            <p className="eyebrow">Portfolio</p>
-          </Reveal>
           <Reveal immediate variant="up" delay={120}>
             <h1 className="hero__title">
-              Career counselling and
-              <span className="hero__accent"> community work</span>
+              School trustee candidate and
+              <span className="hero__accent"> community leader</span>
             </h1>
           </Reveal>
-          <Reveal immediate variant="up" delay={280}>
+          <Reveal immediate variant="up" delay={220}>
+            <p className="hero__slogan">Advancing educational equity and student success</p>
+          </Reveal>
+          <Reveal immediate variant="up" delay={340}>
             <p className="hero__subtitle">{site.tagline}</p>
           </Reveal>
           <Reveal immediate variant="up" delay={440}>
@@ -76,9 +76,9 @@ export function Hero() {
               </div>
             </div>
             <ul className="hero__card-list">
-              <li>Career counselling &amp; job search</li>
-              <li>Cross-cultural integration</li>
-              <li>Real estate advisory</li>
+              <li>School Trustee Candidate, SD43</li>
+              <li>PAC Chair &amp; DPAC Representative</li>
+              <li>Career counsellor &amp; newcomer services</li>
             </ul>
             <div className="hero__card-badge">Coquitlam and the Lower Mainland</div>
           </div>

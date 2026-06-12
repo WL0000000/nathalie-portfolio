@@ -33,11 +33,11 @@ export function Services() {
       <SectionBackdrop variant="muted" />
       <div className="container">
         <Reveal variant="up" className="section__header">
-          <p className="eyebrow">Services</p>
-          <h2 className="section__title">Areas of practice</h2>
+          <p className="eyebrow">Experience</p>
+          <h2 className="section__title">Areas of expertise</h2>
           <p className="section__lead section__lead--centered">
-            Services based on eight years of work in counselling, employment programs,
-            and real estate across the Lower Mainland.
+            Eight years of work in counselling, newcomer services, parent leadership,
+            and community engagement across Coquitlam and the Lower Mainland.
           </p>
         </Reveal>
 

@@ -1,6 +1,8 @@
+export const pageTitle = 'Natalie Wang | Portfolio' as const
+
 export const site = {
   name: 'Natalie Wang',
-  pageTitle: 'Natalie Wang | Portfolio',
+  pageTitle,
   title: 'Career Strategist & Real Estate Advisor',
   tagline:
     'Career counselling, immigrant employment services, and real estate advisory based in Coquitlam, BC.',

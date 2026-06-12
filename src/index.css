@@ -1055,15 +1055,54 @@ textarea {
   border-color: var(--color-accent);
 }
 
+.form-field--error input,
+.form-field--error textarea {
+  border-color: #c0392b;
+}
+
+.form-field--error input:focus,
+.form-field--error textarea:focus {
+  border-color: #c0392b;
+}
+
 .form-field textarea {
   resize: vertical;
   min-height: 120px;
+}
+
+.form-required {
+  color: #c0392b;
+  margin-left: 0.15em;
+  font-weight: 700;
+}
+
+.form-optional {
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: var(--color-ink-soft);
+  margin-left: 0.25em;
+}
+
+.form-field__error {
+  font-size: 0.8rem;
+  color: #c0392b;
+  margin: 0;
+  padding-top: 0.1rem;
 }
 
 .form-success {
   font-size: 0.9rem;
   color: var(--color-accent-dark);
   background: var(--color-accent-soft);
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-sm);
+}
+
+.form-error {
+  font-size: 0.9rem;
+  color: #7b1d1d;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
   padding: 0.85rem 1rem;
   border-radius: var(--radius-sm);
 }
@@ -1211,8 +1250,11 @@ textarea {
   }
 
   .header__nav {
-    position: fixed;
-    inset: var(--header-height) 0 0 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: calc(100svh - var(--header-height));
     z-index: 1002;
     display: flex;
     flex-direction: column;

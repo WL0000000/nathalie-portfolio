@@ -125,7 +125,7 @@ export const testimonials = [
   },
   {
     quote:
-      'Platinum Sales Award recipient in 2017, 2018, and 2019 for sales performance and client service.',
+      'Platinum Sales Award recipient from 2017 to 2025 for sales performance and client service.',
     name: 'Sutton Group 1st West Realty',
     role: 'Real Estate',
   },

@@ -59,7 +59,7 @@ export const services = [
   {
     title: 'Real Estate Advisory',
     description:
-      'Residential real estate services across the Lower Mainland, helping families put down roots in the Coquitlam community. Three-time Sutton Group Platinum Sales Award recipient.',
+      'Residential real estate services across the Lower Mainland, helping families put down roots in the Coquitlam community. Sutton Group Platinum Sales Award recipient, 2017–2025.',
     icon: 'growth',
   },
 ] as const
@@ -111,8 +111,8 @@ export const projects = [
     category: 'Real Estate',
     title: 'Platinum Sales Award',
     description:
-      'Received the Sutton Group Platinum Sales Award in 2017, 2018, and 2019 for sales performance and client service.',
-    year: '2017–2019',
+      'Platinum Sales Award recipient from 2017 to 2025 for sales performance and client service.',
+    year: '2017–2025',
   },
 ] as const
 

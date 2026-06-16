@@ -4,7 +4,9 @@ import { Reveal } from './Reveal'
 
 const galleryPhotos = [
   { src: '/natalie-headshot.jpg', alt: 'Natalie Wang' },
+  { src: '/natalie-trustee-endorsement.jpg', alt: 'Natalie Wang with Craig Woods, SD43 School Trustee, recognized for community outreach' },
   { src: '/natalie-certificate.jpg', alt: 'Natalie Wang receiving Certificate of Appreciation from Sutton Group' },
+  { src: '/natalie-community-lunch.jpg', alt: 'Natalie Wang with community members at a celebratory lunch' },
   { src: '/natalie-tennis-club.jpg', alt: 'Natalie Wang at Coquitlam Tennis Club Canada 150 event' },
 ]
 

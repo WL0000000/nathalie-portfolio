@@ -11,6 +11,16 @@ const photos = [
     alt: 'Natalie Wang playing tennis at Coquitlam Tennis Club',
     caption: 'Active in the Coquitlam community',
   },
+  {
+    src: '/natalie-staff-appreciation.jpg',
+    alt: 'Natalie Wang with community partners at an appreciation event',
+    caption: 'Celebrating with community partners',
+  },
+  {
+    src: '/natalie-community-fundraiser.jpg',
+    alt: 'Natalie Wang connecting with community members at a school gym event',
+    caption: 'Connecting with the community',
+  },
 ]
 
 export function PhotoStrip() {

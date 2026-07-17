@@ -10,6 +10,7 @@ import { Header } from './components/Header'
 import { Hero } from './components/Hero'
 import { PhotoStrip } from './components/PhotoStrip'
 import { Priorities } from './components/Priorities'
+import { Support } from './components/Support'
 import { WhyRunning } from './components/WhyRunning'
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
         <WhyRunning />
         <About />
         <PhotoStrip />
+        <Support />
         <Contact />
       </main>
       <Footer />

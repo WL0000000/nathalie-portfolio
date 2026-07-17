@@ -1096,6 +1096,110 @@ textarea {
   color: var(--color-ink-faint);
 }
 
+/* Support */
+
+.support-card {
+  padding: 1.75rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.support-card--single {
+  max-width: 46rem;
+  margin: 0 auto 1.5rem;
+  text-align: center;
+}
+
+.support-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  margin-bottom: 0.55rem;
+}
+
+.support-card p {
+  color: var(--color-ink-soft);
+  font-size: 0.98rem;
+}
+
+.support__email {
+  display: inline-block;
+  margin: 0.9rem auto 1.1rem;
+  padding: 0.65rem 1.15rem;
+  background: var(--color-accent-soft);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-sm);
+  color: var(--color-accent-dark);
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.01em;
+  word-break: break-word;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.support__email:hover {
+  background: rgba(154, 107, 60, 0.18);
+  transform: translateY(-1px);
+}
+
+.support__eligibility {
+  max-width: 46rem;
+  margin-inline: auto;
+  padding: 1.75rem 2rem;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.support__eligibility-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent-dark);
+  margin-bottom: 1rem;
+}
+
+.support__rules {
+  display: grid;
+  gap: 0.7rem;
+  margin-bottom: 1.25rem;
+}
+
+.support__rules li {
+  position: relative;
+  padding-left: 1.35rem;
+  color: var(--color-ink-soft);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.support__rules li::before {
+  content: '•';
+  position: absolute;
+  left: 0.3rem;
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.support__note {
+  font-size: 0.85rem;
+  color: var(--color-ink-faint);
+  border-top: 1px solid var(--color-border);
+  padding-top: 1rem;
+}
+
+@media (max-width: 640px) {
+  .support__methods {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Contact */
 
 .contact__grid {

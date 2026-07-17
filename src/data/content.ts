@@ -19,6 +19,7 @@ export const navLinks = [
   { label: 'Priorities', href: '#priorities' },
   { label: "Why I'm Running", href: '#why' },
   { label: 'About', href: '#about' },
+  { label: 'Support', href: '#support' },
   { label: 'Get Involved', href: '#contact' },
 ] as const
 
@@ -104,6 +105,29 @@ export const aboutGroups = [
     items: ['Fluent in English and Mandarin', 'Beginner in French and Hebrew'],
   },
 ] as const
+
+// Section: Support the Campaign (offline giving, no online payment processing)
+export const support = {
+  eyebrow: 'Support',
+  title: 'Support the Campaign',
+  intro:
+    'Signs, flyers, and hall rentals all cost money. A contribution of any size helps me reach more families across the Tri-Cities before October 17. Thank you for pitching in.',
+  etransfer: {
+    label: 'By e-transfer',
+    lead: 'Send an Interac e-Transfer to the campaign at:',
+    email: 'nathaliewang2012@gmail.com',
+    detail:
+      'Please include your full name and mailing address in the message so we can record it correctly.',
+  },
+  eligibility: [
+    'Contributions can only come from individuals who live in British Columbia and are Canadian citizens or permanent residents.',
+    'Businesses and unions cannot contribute.',
+    'The most any individual can contribute is about $1,400 for the year.',
+    'Every contribution over $50 is recorded with the donor’s name and address.',
+  ],
+  // TODO: confirm financial agent details and final Elections BC compliance wording before publishing.
+  note: 'Every contribution is recorded and reported by our financial agent as required by Elections BC.',
+} as const
 
 // Section 5: Get Involved
 export const getInvolvedIntro =

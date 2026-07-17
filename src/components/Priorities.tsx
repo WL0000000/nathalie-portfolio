@@ -29,11 +29,11 @@ const icons: Record<(typeof priorities)[number]['icon'], ReactNode> = {
 
 export function Priorities() {
   return (
-    <section className="section section--muted services" id="priorities">
+    <section className="section section--muted services" id="platform">
       <SectionBackdrop variant="muted" />
       <div className="container">
         <Reveal variant="up" className="section__header">
-          <p className="eyebrow">Priorities</p>
+          <p className="eyebrow">Platform</p>
           <h2 className="section__title">What I'll Fight For</h2>
           <p className="section__lead section__lead--centered">{prioritiesIntro}</p>
         </Reveal>

@@ -16,7 +16,7 @@ export const site = {
 } as const
 
 export const navLinks = [
-  { label: 'Priorities', href: '#priorities' },
+  { label: 'Platform', href: '#platform' },
   { label: "Why I'm Running", href: '#why' },
   { label: 'About', href: '#about' },
   { label: 'Support', href: '#support' },

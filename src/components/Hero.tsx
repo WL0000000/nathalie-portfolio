@@ -34,8 +34,8 @@ export function Hero() {
           </Reveal>
           <Reveal immediate variant="up" delay={440}>
             <div className="hero__actions">
-              <a href="#priorities" className="btn btn--primary">
-                See My Priorities
+              <a href="#platform" className="btn btn--primary">
+                See My Platform
               </a>
               <a href="#contact" className="btn btn--ghost">
                 Get in Touch

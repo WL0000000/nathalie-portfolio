@@ -9,9 +9,8 @@ import { Footer } from './components/Footer'
 import { Header } from './components/Header'
 import { Hero } from './components/Hero'
 import { PhotoStrip } from './components/PhotoStrip'
-import { Services } from './components/Services'
-import { Testimonials } from './components/Testimonials'
-import { Work } from './components/Work'
+import { Priorities } from './components/Priorities'
+import { WhyRunning } from './components/WhyRunning'
 
 function App() {
   useScrollEffects()
@@ -28,10 +27,9 @@ function App() {
       <Header />
       <main id="main">
         <Hero />
+        <Priorities />
+        <WhyRunning />
         <About />
-        <Services />
-        <Work />
-        <Testimonials />
         <PhotoStrip />
         <Contact />
       </main>

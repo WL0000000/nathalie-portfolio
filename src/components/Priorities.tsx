@@ -1,9 +1,9 @@
 import type { ReactNode } from 'react'
-import { services } from '../data/content'
+import { priorities, prioritiesIntro } from '../data/content'
 import { Reveal } from './Reveal'
 import { SectionBackdrop } from './SectionBackdrop'
 
-const icons: Record<(typeof services)[number]['icon'], ReactNode> = {
+const icons: Record<(typeof priorities)[number]['icon'], ReactNode> = {
   strategy: (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
       <path d="M4 19V5M4 19h16M8 15l3-4 3 2 4-6" strokeLinecap="round" strokeLinejoin="round" />
@@ -27,26 +27,29 @@ const icons: Record<(typeof services)[number]['icon'], ReactNode> = {
   ),
 }
 
-export function Services() {
+export function Priorities() {
   return (
-    <section className="section section--muted services" id="services">
+    <section className="section section--muted services" id="priorities">
       <SectionBackdrop variant="muted" />
       <div className="container">
         <Reveal variant="up" className="section__header">
-          <p className="eyebrow">Experience</p>
-          <h2 className="section__title">Areas of expertise</h2>
-          <p className="section__lead section__lead--centered">
-            Eight years of work in counselling, newcomer services, parent leadership,
-            and community engagement across Coquitlam and the Lower Mainland.
-          </p>
+          <p className="eyebrow">Priorities</p>
+          <h2 className="section__title">What I'll Fight For</h2>
+          <p className="section__lead section__lead--centered">{prioritiesIntro}</p>
         </Reveal>
 
         <div className="services__grid">
-          {services.map((service, index) => (
-            <Reveal key={service.title} as="article" variant="up" delay={index * 90} className="service-card">
-              <div className="service-card__icon">{icons[service.icon]}</div>
-              <h3>{service.title}</h3>
-              <p>{service.description}</p>
+          {priorities.map((priority, index) => (
+            <Reveal
+              key={priority.title}
+              as="article"
+              variant="up"
+              delay={index * 90}
+              className="service-card"
+            >
+              <div className="service-card__icon">{icons[priority.icon]}</div>
+              <h3>{priority.title}</h3>
+              <p>{priority.description}</p>
             </Reveal>
           ))}
         </div>

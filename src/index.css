@@ -598,6 +598,25 @@ textarea {
   margin-bottom: 2rem;
 }
 
+.hero__meta {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent-dark);
+  margin-bottom: 1rem;
+}
+
+.hero__tagline {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.15rem, 2.2vw, 1.4rem);
+  line-height: 1.4;
+  color: var(--color-ink-soft);
+  max-width: 34rem;
+  margin-bottom: 2rem;
+}
+
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
@@ -831,6 +850,70 @@ textarea {
   left: 0;
   color: var(--color-accent);
   font-weight: 700;
+}
+
+.about__groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.75rem 2rem;
+  margin-top: 2rem;
+}
+
+.about__group-title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  margin-bottom: 0.9rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.about__group .about__highlights {
+  margin-top: 0;
+  gap: 0.65rem;
+}
+
+.about__group .about__highlights li {
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: var(--color-ink-soft);
+}
+
+@media (max-width: 540px) {
+  .about__groups {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Why I'm Running */
+
+.why__inner {
+  max-width: 46rem;
+  margin-inline: auto;
+}
+
+.why__header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.why__body {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.why__para {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--color-ink);
+}
+
+.why__para:last-child {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.4rem;
+  color: var(--color-accent-dark);
 }
 
 /* Services */
@@ -1216,6 +1299,17 @@ textarea {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+}
+
+.footer__campaign-line {
+  font-size: 0.85rem;
+  color: var(--color-ink-soft);
+  line-height: 1.5;
+}
+
+.footer__campaign-line:first-child {
+  font-weight: 700;
+  color: var(--color-ink);
 }
 
 .footer__name {

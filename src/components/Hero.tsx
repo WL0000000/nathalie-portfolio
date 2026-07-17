@@ -18,30 +18,27 @@ export function Hero() {
       <SectionBackdrop variant="hero" />
       <div className="container hero__grid">
         <div className="hero__content">
+          <Reveal immediate variant="up" delay={80}>
+            <p className="hero__meta">
+              {site.district} · {site.electionDate}
+            </p>
+          </Reveal>
           <Reveal immediate variant="up" delay={120}>
             <h1 className="hero__title">
-              School trustee candidate and
-              <span className="hero__accent"> community leader</span>
+              Natalie Wang
+              <span className="hero__accent"> for School Trustee</span>
             </h1>
           </Reveal>
-          <Reveal immediate variant="up" delay={220}>
-            <p className="hero__slogan">Advancing educational equity and student success</p>
-          </Reveal>
           <Reveal immediate variant="up" delay={340}>
-            <p className="hero__subtitle">{site.tagline}</p>
+            <p className="hero__tagline">{site.tagline}</p>
           </Reveal>
           <Reveal immediate variant="up" delay={440}>
             <div className="hero__actions">
-              <a href="#contact" className="btn btn--primary">
-                Get in touch
+              <a href="#priorities" className="btn btn--primary">
+                See My Priorities
               </a>
-              <a
-                href={site.resumeUrl}
-                className="btn btn--ghost"
-                target="_blank"
-                rel="noreferrer"
-              >
-                View resume
+              <a href="#contact" className="btn btn--ghost">
+                Get in Touch
               </a>
             </div>
           </Reveal>
@@ -72,15 +69,15 @@ export function Hero() {
               </span>
               <div>
                 <p className="hero__card-name">{site.name}</p>
-                <p className="hero__card-role">{site.title}</p>
+                <p className="hero__card-role">Candidate for School Trustee</p>
               </div>
             </div>
             <ul className="hero__card-list">
-              <li>School Trustee Candidate, SD43</li>
-              <li>PAC Chair &amp; DPAC Representative</li>
-              <li>Career counsellor &amp; newcomer services</li>
+              <li>School District 43 (Coquitlam)</li>
+              <li>Former PAC Chair and DPAC Representative</li>
+              <li>Coquitlam parent for 17 years</li>
             </ul>
-            <div className="hero__card-badge">Coquitlam and the Lower Mainland</div>
+            <div className="hero__card-badge">Election Day: {site.electionDate}</div>
           </div>
           <div className="hero__glow" />
         </Reveal>

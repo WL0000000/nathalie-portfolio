@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { aboutHighlights, site } from '../data/content'
+import { aboutGroups, aboutIntro } from '../data/content'
 import { Reveal } from './Reveal'
 
 const galleryPhotos = [
@@ -58,35 +58,27 @@ export function About() {
 
         <div className="about__content">
           <Reveal variant="up">
-            <p className="eyebrow">About</p>
+            <p className="eyebrow">About Natalie</p>
           </Reveal>
           <Reveal variant="up" delay={80}>
-            <h2 className="section__title">
-              Parent leader, career counsellor, and school trustee candidate
-            </h2>
+            <h2 className="section__title">A neighbour who shows up</h2>
           </Reveal>
           <Reveal variant="up" delay={160}>
-            <p className="section__lead">
-              I am {site.name}, a Coquitlam parent and community member running for School
-              Trustee in School District 43. I have served as PAC Chair at Pinetree Secondary
-              and as a DPAC representative at two SD43 schools.
-            </p>
+            <p className="section__lead">{aboutIntro}</p>
           </Reveal>
-          <Reveal variant="up" delay={240}>
-            <p className="section__text">
-              My background in career counselling, cross-cultural support, and community program
-              management gives me a practical understanding of what families in our district need.
-              I am committed to listening, advocating, and working collaboratively with staff,
-              parents, and students to support every learner in SD43.
-            </p>
-          </Reveal>
-          <ul className="about__highlights">
-            {aboutHighlights.map((item, index) => (
-              <Reveal key={item} as="li" variant="left" delay={index * 80}>
-                {item}
+
+          <div className="about__groups">
+            {aboutGroups.map((group, index) => (
+              <Reveal key={group.title} variant="up" delay={200 + index * 80} className="about__group">
+                <h3 className="about__group-title">{group.title}</h3>
+                <ul className="about__highlights">
+                  {group.items.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
               </Reveal>
             ))}
-          </ul>
+          </div>
         </div>
       </div>
     </section>

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import type { FormEvent } from 'react'
-import { site } from '../data/content'
+import { getInvolvedIntro, site } from '../data/content'
 import { Reveal } from './Reveal'
 import { SectionBackdrop } from './SectionBackdrop'
 
@@ -79,16 +79,13 @@ export function Contact() {
       <div className="container contact__grid">
         <div className="contact__info">
           <Reveal variant="left">
-            <p className="eyebrow">Contact</p>
+            <p className="eyebrow">Get Involved</p>
           </Reveal>
           <Reveal variant="left" delay={80}>
-            <h2 className="section__title">Get in touch</h2>
+            <h2 className="section__title">Get Involved</h2>
           </Reveal>
           <Reveal variant="left" delay={160}>
-            <p className="section__lead">
-              For career counselling, real estate, or speaking inquiries, please email
-              or call. I am based in Coquitlam and serve clients across the Lower Mainland.
-            </p>
+            <p className="section__lead">{getInvolvedIntro}</p>
           </Reveal>
 
           <ul className="contact__details">

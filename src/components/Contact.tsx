@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import type { FormEvent } from 'react'
 import { getInvolvedIntro, site } from '../data/content'
+import { FollowLinks } from './FollowLinks'
 import { Reveal } from './Reveal'
 import { SectionBackdrop } from './SectionBackdrop'
 
@@ -112,6 +113,10 @@ export function Contact() {
             >
               View full resume (PDF)
             </a>
+          </Reveal>
+
+          <Reveal variant="left" delay={480} className="follow">
+            <FollowLinks />
           </Reveal>
         </div>
 

@@ -133,6 +133,24 @@ export const support = {
 export const getInvolvedIntro =
   'A campaign like this only works with the community behind it. If you want to help, share ideas, or just say hi, get in touch.'
 
+// Subsection inside Get Involved: follow along / press
+export const followLinks = [
+  {
+    label: 'YouTube',
+    title: 'Watch on YouTube',
+    detail: 'Campaign videos and updates from Natalie.',
+    href: 'https://www.youtube.com/@NatalieYWang',
+    icon: 'youtube',
+  },
+  {
+    label: 'In the news',
+    title: 'Freshet News profile',
+    detail: '“Realtor, past PAC chair in the Coquitlam school trustee race”',
+    href: 'https://www.freshetnews.ca/realtor-past-pac-chair-in-the-coquitlam-school-trustee-race/',
+    icon: 'news',
+  },
+] as const
+
 // Section 6: Footer
 export const footer = {
   lines: [

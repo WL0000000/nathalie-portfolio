@@ -2,9 +2,9 @@ import { Reveal } from './Reveal'
 
 const photos = [
   {
-    src: '/natalie-award-ceremony.jpg',
-    alt: 'Natalie Wang receiving the Sutton Group Platinum Sales Award',
-    caption: 'Sutton Group Platinum Sales Award',
+    src: '/natalie-community-women.jpg',
+    alt: 'Natalie Wang with community members at a campaign gathering',
+    caption: 'With community members across the Tri-Cities',
   },
   {
     src: '/natalie-tennis-action.jpg',
@@ -15,6 +15,11 @@ const photos = [
     src: '/natalie-community-fundraiser.jpg',
     alt: 'Natalie Wang connecting with community members at a school gym event',
     caption: 'Connecting with the community',
+  },
+  {
+    src: '/natalie-supporters-group.jpg',
+    alt: 'Natalie Wang celebrating with a group of supporters at a campaign event',
+    caption: 'Rallying supporters across the community',
   },
 ]
 

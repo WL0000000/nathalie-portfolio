@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { site, stats } from '../data/content'
+import { FollowLinksCompact } from './FollowLinks'
 import { Reveal } from './Reveal'
 import { SectionBackdrop } from './SectionBackdrop'
 
@@ -79,6 +80,7 @@ export function Hero() {
             </ul>
             <div className="hero__card-badge">Election Day: {site.electionDate}</div>
           </div>
+          <FollowLinksCompact />
           <div className="hero__glow" />
         </Reveal>
       </div>

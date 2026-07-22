@@ -2,8 +2,12 @@ import { useEffect, useState } from 'react'
 import { aboutGroups, aboutIntro } from '../data/content'
 import { Reveal } from './Reveal'
 
-const galleryPhotos = [
-  { src: '/natalie-headshot.jpg', alt: 'Natalie Wang' },
+const galleryPhotos: { src: string; alt: string; objectPosition?: string }[] = [
+  {
+    src: '/natalie-campaign-banner.jpg',
+    alt: 'Natalie Wang beside her campaign banner for Coquitlam School Board Trustee',
+    objectPosition: '32% top',
+  },
   { src: '/natalie-certificate.jpg', alt: 'Natalie Wang receiving Certificate of Appreciation from Sutton Group' },
   { src: '/natalie-tennis-club.jpg', alt: 'Natalie Wang at Coquitlam Tennis Club Canada 150 event' },
 ]
@@ -36,6 +40,7 @@ export function About() {
                   src={photo.src}
                   alt={photo.alt}
                   className={`about__gallery-img${i === activePhoto ? ' about__gallery-img--active' : ''}`}
+                  style={photo.objectPosition ? { objectPosition: photo.objectPosition } : undefined}
                   loading={i === 0 ? 'eager' : 'lazy'}
                 />
               ))}

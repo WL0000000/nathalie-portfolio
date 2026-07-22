@@ -3,8 +3,8 @@ import { Reveal } from './Reveal'
 const photos = [
   {
     src: '/natalie-community-women.jpg',
-    alt: 'Natalie Wang with community members at a campaign gathering',
-    caption: 'With community members across the Tri-Cities',
+    alt: 'Natalie Wang with community leaders at a campaign gathering',
+    caption: 'With community leaders across the Tri-Cities',
   },
   {
     src: '/natalie-tennis-action.jpg',

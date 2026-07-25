@@ -80,7 +80,6 @@ export const aboutGroups = [
       'PAC Chair, Pinetree Secondary (2021 to 2024)',
       'DPAC Representative, Maple Creek Middle School (2020 to 2022)',
       'DPAC Representative, Panorama Heights Elementary PAC (2019 to 2020)',
-      'Board Member, Port Coquitlam-Coquitlam EDA',
       'Volunteer, Westwood Community Church',
     ],
   },

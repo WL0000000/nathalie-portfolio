@@ -8,6 +8,14 @@ function FollowIcon({ icon }: { icon: string }) {
       </svg>
     )
   }
+  if (icon === 'interview') {
+    return (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="2.5" y="6" width="13" height="12" rx="2" />
+        <path d="M15.5 10.5 21 7.5v9l-5.5-3v-3Z" />
+      </svg>
+    )
+  }
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
       <path d="M4 5h12a1 1 0 0 1 1 1v12a2 2 0 0 0 2 2H5a1 1 0 0 1-1-1V5Z" />
@@ -62,7 +70,7 @@ export function FollowLinksCompact() {
           <span className="follow-pill__icon" aria-hidden="true">
             <FollowIcon icon={link.icon} />
           </span>
-          {link.icon === 'youtube' ? 'Watch on YouTube' : 'Read the news story'}
+          {link.pillLabel}
         </a>
       ))}
     </div>

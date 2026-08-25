@@ -135,11 +135,20 @@ export const getInvolvedIntro =
 // Subsection inside Get Involved: follow along / press
 export const followLinks = [
   {
+    label: 'Interview',
+    title: '“Natalie Wang running for School Trustee in Coquitlam”',
+    detail: 'Natalie on why she is running and what she wants to change in SD43.',
+    href: 'https://youtu.be/LD5D7Z3eImM',
+    icon: 'interview',
+    pillLabel: 'Watch the interview',
+  },
+  {
     label: 'YouTube',
     title: 'Watch on YouTube',
     detail: 'Campaign videos and updates from Natalie.',
     href: 'https://www.youtube.com/@NatalieYWang',
     icon: 'youtube',
+    pillLabel: 'Watch on YouTube',
   },
   {
     label: 'In the news',
@@ -147,6 +156,7 @@ export const followLinks = [
     detail: '“Realtor, past PAC chair in the Coquitlam school trustee race”',
     href: 'https://www.freshetnews.ca/realtor-past-pac-chair-in-the-coquitlam-school-trustee-race/',
     icon: 'news',
+    pillLabel: 'Read the news story',
   },
 ] as const
 

@@ -691,7 +691,8 @@ textarea {
   color: var(--color-accent-dark);
 }
 
-.follow-pill--youtube .follow-pill__icon {
+.follow-pill--youtube .follow-pill__icon,
+.follow-pill--interview .follow-pill__icon {
   color: #c4302b;
 }
 
@@ -1341,7 +1342,8 @@ textarea {
   color: var(--color-accent-dark);
 }
 
-.follow__card--youtube .follow__icon {
+.follow__card--youtube .follow__icon,
+.follow__card--interview .follow__icon {
   background: rgba(255, 0, 0, 0.1);
   color: #c4302b;
 }

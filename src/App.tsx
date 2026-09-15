@@ -11,6 +11,7 @@ import { Hero } from './components/Hero'
 import { PhotoStrip } from './components/PhotoStrip'
 import { Priorities } from './components/Priorities'
 import { Support } from './components/Support'
+import { VoterInfo } from './components/VoterInfo'
 import { WhyRunning } from './components/WhyRunning'
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
       <Header />
       <main id="main">
         <Hero />
+        <VoterInfo />
         <Priorities />
         <WhyRunning />
         <About />

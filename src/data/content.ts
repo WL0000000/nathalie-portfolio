@@ -29,6 +29,33 @@ export const stats = [
   { value: '5+', label: 'Years serving SD43 families' },
 ] as const
 
+// Section: Voter information (official City of Coquitlam links)
+export const voterInfo = {
+  eyebrow: 'Get Ready to Vote',
+  title: 'Your Vote on October 17',
+  intro:
+    'On October 17, Coquitlam voters will elect a mayor, eight councillors, and four SD43 School Trustees. Here is where to find the official details from the City of Coquitlam.',
+  links: [
+    {
+      label: 'Voter Information',
+      title: 'Coquitlam Elections',
+      detail:
+        'Official information on the 2026 General Local Election, including what is on the ballot, how to vote by mail, and how to reach the Election Office.',
+      href: 'https://www.coquitlam.ca/729/Elections',
+      icon: 'ballot',
+    },
+    {
+      label: 'Voting Locations',
+      title: 'Where to Vote',
+      detail:
+        'Advance voting is offered on several days from October 5 to 15, and Election Day locations are open 8 a.m. to 8 p.m. on October 17. Every location is wheelchair accessible.',
+      href: 'https://www.coquitlam.ca/1198/Voting-Locations',
+      icon: 'location',
+    },
+  ],
+  cta: 'Click here to learn more!',
+} as const
+
 // Section 2: Priorities, "What I'll Fight For"
 export const prioritiesIntro =
   'Every promise on this page comes from what I have seen in SD43 classrooms, at PAC meetings, and in conversations with parents across Coquitlam. These are the four things I want to change.'

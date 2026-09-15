@@ -1595,6 +1595,18 @@ textarea {
   color: var(--color-ink-faint);
 }
 
+.footer__land {
+  grid-column: 1 / -1;
+  max-width: 60rem;
+  margin: 0.5rem auto 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.8rem;
+  line-height: 1.6;
+  text-align: center;
+  color: var(--color-ink-soft);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

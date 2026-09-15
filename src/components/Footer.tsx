@@ -26,6 +26,8 @@ export function Footer() {
         </nav>
 
         <p className="footer__copy">{footer.authorization}</p>
+
+        <p className="footer__land">{footer.landAcknowledgement}</p>
       </div>
     </footer>
   )

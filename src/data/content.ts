@@ -169,4 +169,6 @@ export const footer = {
   ],
   // TODO: update once the financial agent is officially registered.
   authorization: 'Authorized by the financial agent for Natalie Wang.',
+  landAcknowledgement:
+    'We acknowledge that the campaign to elect Natalie Wang operates on the traditional, ancestral and unceded territory of the kʷikʷəƛ̓əm (Kwikwetlem) First Nation. We thank the kʷikʷəƛ̓əm people, who continue to live on these lands and care for them, along with the waters and all that is above and below.',
 } as const
